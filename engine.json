@@ -1,0 +1,10 @@
+{
+  "engine": "claude",
+  "harness_id": "anthropic/claude-code",
+  "features": [
+    "context/per-turn",
+    "memory/none",
+    "json-output",
+    "tools/vendor-restricted"
+  ]
+}

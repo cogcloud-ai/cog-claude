@@ -1,0 +1,37 @@
+{
+  "document_kind": "bind_request",
+  "contract": "openteams/satisfier-binding [0.1-draft]",
+  "request_id": "request-cog-claude",
+  "binding_id": "binding-cog-claude",
+  "revision": 1,
+  "provider": {
+    "id": "openteams/cog-claude",
+    "version": "0.1.0"
+  },
+  "requirement": {
+    "id": "context-interaction",
+    "capability": "agentic-harness/chat",
+    "accepted_compositions": [
+      "model+harness"
+    ],
+    "features": [
+      "context/per-turn",
+      "memory/none",
+      "json-output",
+      "tools/vendor-restricted"
+    ],
+    "model_id": "sonnet",
+    "allowed_localities": [
+      "cloud"
+    ],
+    "evidence_level": "declaration",
+    "identity_verified": false,
+    "revision_pinned": false
+  },
+  "configuration": {
+    "memory_mode": "none",
+    "tool_policy": "vendor-restricted",
+    "model_id": "sonnet"
+  },
+  "credential_refs": {}
+}

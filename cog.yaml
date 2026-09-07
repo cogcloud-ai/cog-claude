@@ -1,0 +1,54 @@
+schema: openteams/cog-manifest [0.1]
+id: openteams/cog-claude
+version: 0.1.0
+summary: Provides Claude through Claude Code as an inseparable Model+Harness Cog.
+owner: trent@openteams.com
+license: BSD-3-Clause
+kind: model
+memory: none
+prohibits:
+- self_admission
+- credential_export
+- silent_model_substitution
+- external_tool_grants
+requires: []
+io:
+  accepts:
+  - harness_turn_request
+  - binding_request
+  produces:
+  - harness_turn_result
+  - candidate_binding
+extensions:
+  satisfier_binding:
+    contract: openteams/satisfier-binding [0.1-draft]
+    declaration: binding/provider.json
+interfaces:
+- name: turn
+  kind: command
+  task: turn
+  audience: usage
+  default: true
+- name: bind
+  kind: command
+  task: bind
+  audience: lifecycle
+- name: card
+  kind: command
+  task: card
+  audience: lifecycle
+- name: check
+  kind: command
+  task: check
+  audience: lifecycle
+- name: validate
+  kind: command
+  task: validate
+  audience: lifecycle
+evaluation:
+  tests:
+  - tests/test_provider.py
+model:
+  descriptor: true
+  access: vendor-cli-subscription
+  carries_weights: false

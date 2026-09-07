@@ -1,0 +1,41 @@
+{
+  "document_kind": "provider",
+  "contract": "openteams/satisfier-binding [0.1-draft]",
+  "provider": {
+    "id": "openteams/cog-claude",
+    "version": "0.1.0"
+  },
+  "capability": "agentic-harness/chat",
+  "compositions": [
+    "model+harness"
+  ],
+  "binding_interface": "bind",
+  "configuration_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "memory_mode": {
+        "const": "none"
+      },
+      "tool_policy": {
+        "const": "vendor-restricted"
+      },
+      "model_id": {
+        "type": "string",
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,99}$"
+      }
+    },
+    "required": [
+      "memory_mode",
+      "tool_policy",
+      "model_id"
+    ]
+  },
+  "credential_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {},
+    "required": []
+  },
+  "model_requirement": null
+}
