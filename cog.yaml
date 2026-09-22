@@ -3,7 +3,7 @@ id: openteams/cog-claude
 version: 0.1.0
 summary: Provides Claude through Claude Code as an inseparable Model+Harness Cog.
 owner: trent@openteams.com
-license: BSD-3-Clause
+license: Apache-2.0
 kind: model
 memory: none
 prohibits:
