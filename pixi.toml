@@ -1,4 +1,5 @@
 [workspace]
+license = "Apache-2.0"
 name = "cog-claude"
 version = "0.1.0"
 channels = ["conda-forge"]
